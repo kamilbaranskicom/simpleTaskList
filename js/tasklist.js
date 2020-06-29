@@ -38,12 +38,12 @@
     const render = () => {
         let HTMLString = '';
 
-        for (task of taskList) {
+        for (const task of taskList) {
             HTMLString +=
                 `       <li class="taskList__task">
-            <button class="taskList__toggleTaskDone js-toggleTaskDone">${ (task.done ? '✔' : '')}</button>
+            <button class="taskList__smallButton js-toggleTaskDone">${ (task.done ? '✔' : '')}</button>
             <strong class="taskList__taskName${ (task.done ? ' taskList__taskName--done' : '')}">${task.name}</strong>
-            <button class="taskList__deleteTask js-deleteTask">🗑️</button>
+            <button class="taskList__smallButton taskList__smallButton--red js-deleteTask">🗑</button>
         </li>
 `;
         };

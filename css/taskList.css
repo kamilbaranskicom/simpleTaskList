@@ -79,7 +79,7 @@ html {
     font-weight: normal;
 }
 
-.taskList__toggleTaskDone {
+.taskList__smallButton {
     background-color: green;
     color: white;
     border: none;
@@ -88,11 +88,6 @@ html {
     margin: 8px;
 }
 
-.taskList__deleteTask {
+.taskList__smallButton--red {
     background-color: red;
-    color: white;
-    border: none;
-    width: 30px;
-    height: 30px;
-    margin: 8px;
 }
