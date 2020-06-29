@@ -11,19 +11,19 @@
     <title>Lista zadań</title>
 </head>
 
-<body>
-    <header>
+<body class="taskList">
+    <header class="taskList__header">
         <h1>Lista zadań</H1>
     </header>
-    <section>
-        <h2>Dodaj nowe zadanie</h2>
+    <section class="taskList__section">
+        <h2 class="taskList__sectionHeader">Dodaj nowe zadanie</h2>
         <form class="taskList__addTaskForm js-addTaskForm">
             <input placeholder="Co jest do zrobienia?" class="taskList__newTaskName js-newTaskName">
             <button class="taskList__addTaskButton js-addTaskButton">Dodaj zadanie</button>
         </form>
     </section>
-    <main>
-        <h2>Lista zadań</h2>
+    <main class="taskList__section">
+        <h2 class="taskList__sectionHeader">Lista zadań</h2>
         <ul class="taskList__taskList js-taskList">
             <li class="taskList__task">
                 <button class="taskList__toggleTaskDone js-toggleTaskDone">✔</button>

@@ -6,7 +6,7 @@ html {
     box-sizing: inherit;
 }
 
-body {
+.taskList {
     font-family: 'Montserrat', sans-serif;
     margin: 20px auto;
     padding:20px;
@@ -18,10 +18,7 @@ body {
     grid-gap:10px;
 }
 
-header {
-}
-
-section, main {
+.taskList__section {
     background-color:#eee;
     border:1px solid #ccc;
 }
@@ -32,7 +29,7 @@ section, main {
     flex-wrap:wrap;
 }
 
-h2 {
+.taskList__sectionHeader {
     border-bottom:1px solid #d0d0d0;
     padding:20px;
     margin:0px;
@@ -67,7 +64,7 @@ h2 {
     border-bottom:1px solid #ccc;
 }
 
-.taskList__task--done .taskList__taskName {
+.taskList__taskName--done {
     text-decoration:line-through;
 } 
 

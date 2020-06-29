@@ -37,18 +37,15 @@ const toggleTaskDone = (index) => {
 
 const render = () => {
     let HTMLString = '';
-    const doneString =
-        `       <li class="taskList__task taskList__task--done">
-            <button class="taskList__toggleTaskDone js-toggleTaskDone">✔</button>`;
-    const notdoneString =
-        `       <li class="taskList__task">
-            <button class="taskList__toggleTaskDone js-toggleTaskDone"></button>`;
 
     for (task of taskList) {
-        HTMLString += (task.done ? doneString : notdoneString) + `
-            <strong class="taskList__taskName">${task.name}</strong>
+        HTMLString +=
+            `       <li class="taskList__task">
+            <button class="taskList__toggleTaskDone js-toggleTaskDone">${ (task.done ? '✔' : '')}</button>
+            <strong class="taskList__taskName${ (task.done ? ' taskList__taskName--done' : '')}">${task.name}</strong>
             <button class="taskList__deleteTask js-deleteTask">🗑️</button>
-        </li>`;
+        </li>
+`;
     };
     document.querySelector('.js-taskList').innerHTML = HTMLString;
     bindEvents();
