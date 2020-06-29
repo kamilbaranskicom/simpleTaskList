@@ -6,87 +6,93 @@ html {
     box-sizing: inherit;
 }
 
+:root {
+    --border-color: #d5d5d5;
+    --box-shadow-color: #c0c0c0;
+}
+
 .taskList {
     font-family: 'Montserrat', sans-serif;
     margin: 20px auto;
-    padding:20px;
+    padding: 20px;
     line-height: 140%;
     background-color: #dadada;
     color: #333;
-    display:grid;
-    max-width:800px;
-    grid-gap:10px;
+    display: grid;
+    max-width: 864px;
+    grid-gap: 10px;
 }
 
 .taskList__section {
-    background-color:#eee;
-    border:1px solid #ccc;
+    background-color: #eee;
+    border: 1px solid var(--border-color);
+    box-shadow: 0px 0px 2px var(--box-shadow-color);
 }
 
 .taskList__addTaskForm {
-    display:flex;
-    padding:10px;
-    flex-wrap:wrap;
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
 }
 
 .taskList__sectionHeader {
-    border-bottom:1px solid #d0d0d0;
-    padding:20px;
-    margin:0px;
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px;
+    margin: 0px;
+    font-size:19px;
 }
 
 .taskList__addTaskButton {
-    background-color:teal;
-    color:#eee;
-    border:0px;
-    margin:10px;
-    padding:10px 5px;
-    flex-grow:1;
+    background-color: teal;
+    color: #ddd;
+    border: 0px;
+    margin: 5px 10px;
+    padding: 10px 5px;
+    flex-grow: 1;
 }
 
 .taskList__newTaskName {
-    flex-grow:20;
-    margin:10px;
-    padding:10px;
-    background:transparent;
-    border:1px solid #ccc;
+    flex-grow: 20;
+    margin: 5px 10px;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid var(--border-color);
 }
 
 .taskList__taskList {
-    padding:20px;
+    padding: 20px;
 }
 
 .taskList__task {
-    display:grid;
+    display: grid;
     grid-template-columns: min-content auto min-content;
-    align-items:center;
-    padding:5px;
-    border-bottom:1px solid #ccc;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .taskList__taskName--done {
-    text-decoration:line-through;
-} 
+    text-decoration: line-through;
+}
 
 .taskList__taskName {
-    font-weight:normal;
+    font-weight: normal;
 }
 
 .taskList__toggleTaskDone {
-    background-color:green;
-    color:white;
-    border:none;
-    width:30px;
-    height:30px;
-    margin:5px;
+    background-color: green;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin: 8px;
 }
 
 .taskList__deleteTask {
-    background-color:red;
-    color:white;
-    border:none;
-    width:30px;
-    height:30px;
-    margin:5px;
+    background-color: red;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin: 8px;
 }
-
