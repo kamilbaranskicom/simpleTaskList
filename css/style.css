@@ -1,0 +1,95 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px auto;
+    padding:20px;
+    line-height: 140%;
+    background-color: #dadada;
+    color: #333;
+    display:grid;
+    max-width:800px;
+    grid-gap:10px;
+}
+
+header {
+}
+
+section, main {
+    background-color:#eee;
+    border:1px solid #ccc;
+}
+
+.taskList__addTaskForm {
+    display:flex;
+    padding:10px;
+    flex-wrap:wrap;
+}
+
+h2 {
+    border-bottom:1px solid #d0d0d0;
+    padding:20px;
+    margin:0px;
+}
+
+.taskList__addTaskButton {
+    background-color:teal;
+    color:#eee;
+    border:0px;
+    margin:10px;
+    padding:10px 5px;
+    flex-grow:1;
+}
+
+.taskList__newTaskName {
+    flex-grow:20;
+    margin:10px;
+    padding:10px;
+    background:transparent;
+    border:1px solid #ccc;
+}
+
+.taskList__taskList {
+    padding:20px;
+}
+
+.taskList__task {
+    display:grid;
+    grid-template-columns: min-content auto min-content;
+    align-items:center;
+    padding:5px;
+    border-bottom:1px solid #ccc;
+}
+
+.taskList__task--done .taskList__taskName {
+    text-decoration:line-through;
+} 
+
+.taskList__taskName {
+    font-weight:normal;
+}
+
+.taskList__toggleTaskDone {
+    background-color:green;
+    color:white;
+    border:none;
+    width:30px;
+    height:30px;
+    margin:5px;
+}
+
+.taskList__deleteTask {
+    background-color:red;
+    color:white;
+    border:none;
+    width:30px;
+    height:30px;
+    margin:5px;
+}
+
