@@ -64,9 +64,9 @@
     const init = () => {
         // not needed, as we start with empty taskList, but hey, let's be solid ;)
         render();
-		
+
         document.querySelector('.js-addTaskForm').addEventListener('submit', addTask);
-		document.querySelector('.js-newTaskName').focus();
+        document.querySelector('.js-newTaskName').focus();
     }
 
     init();
