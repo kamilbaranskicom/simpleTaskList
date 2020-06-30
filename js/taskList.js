@@ -42,7 +42,7 @@
             HTMLString +=
                 `       <li class="taskList__task">
             <button class="taskList__smallButton js-toggleTaskDone">${ (task.done ? '✔' : '')}</button>
-            <strong class="taskList__taskName${ (task.done ? ' taskList__taskName--done' : '')}">${task.name}</strong>
+            <strong class="taskList__taskName${(task.done ? ' taskList__taskName--done' : '')}">${task.name}</strong>
             <button class="taskList__smallButton taskList__smallButton--red js-deleteTask">🗑</button>
         </li>
 `;
