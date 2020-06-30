@@ -39,7 +39,7 @@ html {
     border-bottom: 1px solid var(--border-color);
     padding: 20px;
     margin: 0px;
-    font-size:19px;
+    font-size: 19px;
 }
 
 .taskList__addTaskButton {
