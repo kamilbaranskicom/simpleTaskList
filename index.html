@@ -16,14 +16,24 @@
         <h1>Lista zadań</H1>
     </header>
     <section class="taskList__section">
-        <h2 class="taskList__sectionHeader">Dodaj nowe zadanie</h2>
+        <div class="taskList__sectionHeader">
+            <h2 class="taskList__sectionHeaderText">Dodaj nowe zadanie</h2>
+        </div>
         <form class="taskList__addTaskForm js-addTaskForm">
             <input placeholder="Co jest do zrobienia?" class="taskList__newTaskName js-newTaskName">
             <button class="taskList__addTaskButton js-addTaskButton">Dodaj zadanie</button>
         </form>
     </section>
     <main class="taskList__section">
-        <h2 class="taskList__sectionHeader">Lista zadań</h2>
+        <div class="taskList__sectionHeader">
+            <h2 class="taskList__sectionHeaderText">Lista zadań</h2>
+            <div class="taskList__textButtonsWrapper">
+                <button class="taskList__textButton js-toggleHideDone taskList__textButton--hidden">
+                    <span class="js-toggleHideDoneMark">Ukryj</span> ukończone</button>
+                <button class="taskList__textButton js-markAllAsDone taskList__textButton--hidden" disabled>
+                    Ukończ wszystkie</button>
+            </div>
+        </div>
         <ul class="taskList__taskList js-taskList">
             <!--<li class="taskList__task">
                 <button class="taskList__smallButton js-toggleTaskDone">✔</button>
