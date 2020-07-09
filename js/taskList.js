@@ -48,7 +48,7 @@
         const taskListElement = document.querySelector('.js-taskList');
 
         taskListElement.classList.toggle('taskList__taskList--hideDone');
-        document.querySelector('.js-toggleHideDoneMark').innerHTML = (taskListElement.classList.contains('taskList__taskList--hideDone') ? 'Ukryj' : 'Pokaż');
+        document.querySelector('.js-toggleHideDoneMark').innerHTML = (taskListElement.classList.contains('taskList__taskList--hideDone') ? 'Pokaż' : 'Ukryj');
     }
 
     const markAllAsDone = () => {
