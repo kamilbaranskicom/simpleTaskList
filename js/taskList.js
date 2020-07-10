@@ -12,19 +12,12 @@
      */
     let taskList = []
 
-    const addTask = () => {
-        const newTaskNameInputElement = document.querySelector('.js-newTaskName');
-        const newTaskName = newTaskNameInputElement.value.trim();
-
-        if (newTaskName) {
-            newTaskNameInputElement.value = '';
-            taskList = [
-                ...taskList,
-                { name: newTaskName, done: false }
-            ];
-            render();
-        }
-        newTaskNameInputElement.focus();
+    const addTask = (newTaskName) => {
+        taskList = [
+            ...taskList,
+            { name: newTaskName, done: false }
+        ];
+        render();
     }
 
     const deleteTask = (index) => {
@@ -93,11 +86,23 @@
         });
     }
 
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+        const newTaskNameInputElement = document.querySelector('.js-newTaskName');
+        const newTaskName = newTaskNameInputElement.value.trim();
+
+        if (newTaskName) {
+            newTaskNameInputElement.value = '';
+            addTask(newTaskName);
+        }
+        newTaskNameInputElement.focus();
+    }
+
     const init = () => {
         // not needed, as we start with empty taskList, but hey, let's be solid ;)
         render();
 
-        document.querySelector('.js-addTaskForm').addEventListener('submit', (event) => { event.preventDefault(); addTask(); });
+        document.querySelector('.js-addTaskForm').addEventListener('submit', onFormSubmit);
         document.querySelector('.js-newTaskName').focus();
         document.querySelector('.js-toggleHideDone').addEventListener('click', toggleHideDone);
         document.querySelector('.js-markAllAsDone').addEventListener('click', markAllAsDone);
