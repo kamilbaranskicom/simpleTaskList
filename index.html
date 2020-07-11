@@ -11,37 +11,47 @@
     <title>Lista zadań</title>
 </head>
 
-<body class="taskList">
-    <header class="taskList__header">
-        <h1>Lista zadań</H1>
-    </header>
-    <section class="taskList__section">
-        <div class="taskList__sectionHeader">
-            <h2 class="taskList__sectionHeaderText">Dodaj nowe zadanie</h2>
-        </div>
-        <form class="taskList__addTaskForm js-addTaskForm">
-            <input placeholder="Co jest do zrobienia?" class="taskList__newTaskName js-newTaskName">
-            <button class="taskList__addTaskButton js-addTaskButton">Dodaj zadanie</button>
-        </form>
-    </section>
-    <main class="taskList__section">
-        <div class="taskList__sectionHeader">
-            <h2 class="taskList__sectionHeaderText">Lista zadań</h2>
-            <div class="taskList__textButtonsWrapper">
-                <button class="taskList__textButton js-toggleHideDone taskList__textButton--hidden">
-                    <span class="js-toggleHideDoneMark">Ukryj</span> ukończone</button>
-                <button class="taskList__textButton js-markAllAsDone taskList__textButton--hidden" disabled>
-                    Ukończ wszystkie</button>
-            </div>
-        </div>
-        <ul class="taskList__taskList js-taskList">
-            <!--<li class="taskList__task taskList__task--done">
-                <button class="taskList__smallButton js-toggleTaskDone">✔</button>
-                <strong class="taskList__taskName">task name</strong>
-                <button class="taskList__smallButton taskList__smallButton--red js-deleteTask">🗑</button>
-            </li>-->
-        </ul>
-    </main>
+<body>
+    <div class="taskList">
+        <header class="taskList__header">
+            <h1>Lista zadań</H1>
+        </header>
+        <section class="section">
+            <header class="section__sectionHeader">
+                <h2 class="section__sectionHeaderText">Dodaj nowe zadanie</h2>
+            </header>
+            <main class="section__sectionBody">
+                <form class="addTaskForm js-addTaskForm">
+                    <input placeholder="Co jest do zrobienia?" class="addTaskForm__newTaskName js-newTaskName">
+                    <button class="addTaskForm__addTaskButton js-addTaskButton">
+                        Dodaj zadanie
+                    </button>
+                </form>
+            </main>
+        </section>
+        <section class="section">
+            <header class="section__sectionHeader">
+                <h2 class="section__sectionHeaderText">Lista zadań</h2>
+                <div class="textButtons js-textButtons textButtons--hidden">
+                    <button class="textButtons__textButton js-toggleHideDone">
+                        <span class="js-toggleHideDoneMark">Ukryj</span> ukończone
+                    </button>
+                    <button class="textButtons__textButton js-markAllAsDone" disabled>
+                        Ukończ wszystkie
+                    </button>
+                </div>
+            </header>
+            <main class="section__sectionBody">
+                <ul class="tasks js-taskList">
+                    <!--<li class="tasks__task list__task--done">
+                        <button class="tasks__smallButton js-toggleTaskDone">✔</button>
+                        <strong class="tasks__taskName">task name</strong>
+                        <button class="tasks__smallButton tasks__smallButton--warning js-deleteTask">🗑</button>
+                    </li>-->
+                </ul>
+            </main>
+        </section>
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,32 @@
+.addTaskForm {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.addTaskForm__addTaskButton {
+    background-color: teal;
+    color: #ddd;
+    border: 0px;
+    margin: 5px 10px;
+    padding: 10px 5px;
+    flex-grow: 1;
+    transition: 0.3s;
+}
+
+.addTaskForm__addTaskButton:hover {
+    background-color: hsl(180, 100%, 35%);
+    transform: scale(1.05);
+}
+
+.addTaskForm__addTaskButton:active {
+    background-color: hsl(180, 100%, 45%);
+    transform: scale(0.9);
+}
+
+.addTaskForm__newTaskName {
+    flex-grow: 200;
+    margin: 5px 10px;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+}

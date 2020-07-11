@@ -40,8 +40,8 @@
     const toggleHideDone = () => {
         const taskListElement = document.querySelector('.js-taskList');
 
-        taskListElement.classList.toggle('taskList__taskList--hideDone');
-        document.querySelector('.js-toggleHideDoneMark').innerHTML = (taskListElement.classList.contains('taskList__taskList--hideDone') ? 'Pokaż' : 'Ukryj');
+        taskListElement.classList.toggle('tasks--hideDone');
+        document.querySelector('.js-toggleHideDoneMark').innerHTML = (taskListElement.classList.contains('tasks--hideDone') ? 'Pokaż' : 'Ukryj');
     }
 
     const markAllAsDone = () => {
@@ -51,10 +51,10 @@
 
     const render = () => {
         document.querySelector('.js-taskList').innerHTML = (taskList.map(({ done, name }) =>
-            `<li class="taskList__task${(done ? ' taskList__task--done' : '')}">
-                <button class="taskList__smallButton js-toggleTaskDone">${ (done ? '✔' : '')}</button>
-                <strong class="taskList__taskName">${name}</strong>
-                <button class="taskList__smallButton taskList__smallButton--red js-deleteTask">🗑</button>
+            `<li class="tasks__task ${(done ? ' tasks__task--done' : '')}">
+                <button class="tasks__smallButton js-toggleTaskDone">${ (done ? '✔' : '')}</button>
+                <strong class="tasks__taskName">${name}</strong>
+                <button class="tasks__smallButton tasks__smallButton--warning js-deleteTask">🗑</button>
                 `)).join('');
 
         setOptionalButtons();
@@ -62,18 +62,8 @@
     }
 
     const setOptionalButtons = () => {
-        const markAllAsDoneButton = document.querySelector('.js-markAllAsDone');
-        const toggleHideDoneButton = document.querySelector('.js-toggleHideDone');
-
-        markAllAsDoneButton.disabled = taskList.every(({ done }) => done);
-
-        if (taskList.length) {
-            toggleHideDoneButton.classList.remove('taskList__textButton--hidden');
-            markAllAsDoneButton.classList.remove('taskList__textButton--hidden');
-        } else {
-            toggleHideDoneButton.classList.add('taskList__textButton--hidden');
-            markAllAsDoneButton.classList.add('taskList__textButton--hidden');
-        }
+        document.querySelector('.js-markAllAsDone').disabled = taskList.every(({ done }) => done);
+        document.querySelector('.js-textButtons').classList.toggle('textButtons--hidden', !(taskList.length));
     };
 
     const bindEvents = () => {

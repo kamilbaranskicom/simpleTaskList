@@ -1,0 +1,19 @@
+:root {
+    --border-color: #d5d5d5;
+    --box-shadow-color: #c0c0c0;
+}
+
+body {
+    background-color: #dadada;
+}
+
+.taskList {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px auto;
+    padding: 20px;
+    line-height: 140%;
+    color: #333;
+    display: grid;
+    max-width: 864px;
+    grid-gap: 10px;
+}

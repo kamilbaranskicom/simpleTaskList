@@ -1,0 +1,29 @@
+.textButtons {
+    padding: 10px;
+    line-height: 2;
+    text-align: right;
+    flex-grow: 1;
+}
+
+.textButtons--hidden {
+    display: none;
+}
+
+.textButtons__textButton {
+    border: none;
+    background: none;
+    color: teal;
+    transition: 0.2s;
+}
+
+.textButtons__textButton:hover {
+    color: hsl(180, 100%, 30%);
+}
+
+.textButtons__textButton:active {
+    color: hsl(180, 100%, 35%);
+}
+
+.textButtons__textButton:disabled {
+    color: #999;
+}
